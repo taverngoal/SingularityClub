@@ -1,0 +1,23 @@
+{
+  "name": "SingularityClub",
+  "version": "0.0.1",
+  "authors": [
+    "Tavern <windack@qq.com>"
+  ],
+  "description": "teach demo",
+  "main": "index.html",
+  "keywords": [
+    "teach"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "impress.js": "~0.5.3"
+  }
+}
