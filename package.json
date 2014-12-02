@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "main":"app/index.html",
   "window": {
-      /*"frame": false,
-      "toolbar": false,*/
+//      "frame": false,
+//      "toolbar": false,
       "width": 1200,
       "height": 700,
       "min_height": 500,
