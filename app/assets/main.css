@@ -5,6 +5,8 @@ q{ text-align: center }
 ::-webkit-scrollbar-thumb { background: #444;}
 ::-webkit-scrollbar-thumb:window-inactive { background: #fff;}
 
-#lang_input span.lang{ padding:5px 10px;display: inline-block; margin:0  10px 10px 0;  background: #eee    }
+span.lang{ padding:5px 10px;display: inline-block; margin:0  10px 10px 0;  background: #eee;
+    cursor: pointer;    }
+span.lang.del:hover{ background:#a94442;color:#fff }
 div.step.slide { overflow:auto }
 #lang_input form q{ margin-top: 20px; }
