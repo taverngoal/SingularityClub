@@ -709,8 +709,8 @@
                     case 38: // up
                              api.prev();
                              break;
-                    case 9:  // tab
-                    case 32: // space
+                    //case 9:  // tab
+                    //case 32: // space
                     case 34: // pg down
                     case 39: // right
                     case 40: // down

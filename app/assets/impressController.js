@@ -1,5 +1,6 @@
 angular.module("SingularityClub1", [])
     .controller("impress", ["$scope", function ($scope) {
+        $('[data-toggle]').tooltip()
         $scope.langs_dic = {
             "c": {text: "C", description: "能以简易的方式编译、处理低级存储器、产生少量的机器码以及不需要任何运行环境支持便能运行的编程语言。"},
             "c++": {text: "C++", description: "在C语言的基础上开发的一种集面向对象编程、泛型编程和过程化编程于一体的编程语言。"},

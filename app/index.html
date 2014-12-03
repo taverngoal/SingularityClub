@@ -38,9 +38,10 @@
     </div>
     <div id="lang_input" class="step slide" data-x="0" data-y="-1500">
         <form>
+            <i class="glyphicon glyphicon-asterisk"  data-toggle="tooltip" title="Default tooltip" data-placement="right"></i>
             <input class="form-control" placeholder="计算机语言，逗号隔开:','" ng-list ng-model="langs">
             <q ng-show="langs.length>0">
-                <span ng-repeat="l in langs" class="lang" data-toggle="tooltip" data-placement="left" title="Tooltip on left">{{langs_dic[l].text}}</span></q>
+                <span ng-repeat="l in langs" class="lang" data-toggle="tooltip" data-placement="bottom" title="{{langs_dic[l].description}}">{{langs_dic[l].text}}</span></q>
         </form>
         <q ng-hide="langs.length>0" style="font-size: 96px">知无不言</q>
         <q ng-hide="langs.length>0" style="font-size: 96px">言无不尽</q>
