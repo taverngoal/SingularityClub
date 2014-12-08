@@ -10,3 +10,4 @@ span.lang{ padding:5px 10px;display: inline-block; margin:0  10px 10px 0;  backg
 span.lang.del:hover{ background:#a94442;color:#fff }
 div.step.slide { overflow:auto }
 #lang_input form q{ margin-top: 20px; }
+a{ text-decoration: none !important}
