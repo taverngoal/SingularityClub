@@ -9,3 +9,6 @@ credits.html
 ffmpegsumo.dll
 locales/
 app/bower_components/
+nwsnapshot
+node-webkit.app/
+.*/
