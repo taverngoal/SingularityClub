@@ -32,9 +32,9 @@
 <!--</div>-->
 <div id="impress">
     <div id="for_lang" class="step slide" data-x="-5000" data-y="-1500">
-        <q>请大家帮我找一种</q>
+        <q>列举你所知道的</q>
         <q><b>计算机语言</b></q>
-        <q style="font-size:48px">(尽可能的帮我列举)</q>
+        <q>我来记录</q>
     </div>
     <div id="lang_input" class="step slide" data-x="-4000" data-y="-1500">
         <form>
@@ -48,39 +48,28 @@
         <q ng-hide="langs.length>0" style="font-size: 96px">知无不言</q>
         <q ng-hide="langs.length>0" style="font-size: 96px">言无不尽</q>
     </div>
-
     <div class="step slide" data-x="-3000" data-y="-1500">
-        <table class="table">
-            <tbody>
-            <tr ng-repeat="l in langs">
-                <td>{{langs_dic[l].text}}</td>
-                <td>{{langs_dic[l].description}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="step slide" data-x="-2000" data-y="-1500">
         <q ng-show="langs.length>0">
                 <span ng-repeat="l in langs" class="lang" data-container="body" data-toggle="popover"
                       data-placement="bottom"
                       data-content="{{langs_dic[l].description}}">{{langs_dic[l].text}}</span></q>
         <q>大家说了<b>{{langs.length}}</b>个计算机语言，请帮我选择其中的一个。</q>
     </div>
-    <div class="step slide" data-x="-1000" data-y="-1500">
+    <div class="step slide" data-x="-2000" data-y="-1500">
         <q>我想要动态语言</q>
-        <q> <span ng-repeat="l in langs" class="lang del" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
+        <q> <span ng-repeat="l in langs" class="lang del" title="{{langs_dic[l].description}}" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
+    </div>
+    <div class="step slide" data-x="-1000" data-y="-1500">
+        <q>接下来是脚本语言</q>
+        <q> <span ng-repeat="l in langs" class="lang del" title="{{langs_dic[l].description}}" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
     </div>
     <div class="step slide" data-x="0" data-y="-1500">
-        <q>接下来是脚本语言</q>
-        <q> <span ng-repeat="l in langs" class="lang del" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
+        <q>然后是能跨平台，可以做桌面程序</q>
+        <q> <span ng-repeat="l in langs" class="lang del" title="{{langs_dic[l].description}}" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
     </div>
     <div class="step slide" data-x="1000" data-y="-1500">
-        <q>然后是能跨平台（Linux, MS Windows, MAC OS, Unix），又不只是服务器语言</q>
-        <q> <span ng-repeat="l in langs" class="lang del" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
-    </div>
-    <div class="step slide" data-x="2000" data-y="-1500">
-        <q>最后，浏览器能运行的语言</q>
-        <q> <span ng-repeat="l in langs" class="lang del" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
+        <q>最后，浏览器直接运行的语言</q>
+        <q> <span ng-repeat="l in langs" class="lang del" title="{{langs_dic[l].description}}" ng-click="remove(l)">{{langs_dic[l].text}}</span></q>
     </div>
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
         <span class="try">Then you should try</span>
@@ -90,7 +79,7 @@
     </div>
     <div class="step" data-x="1850" data-y="3000" data-rotate="90" data-scale="5" data-rotate-x="-90">
         <p><strong>谈谈对Javascript的看法</strong> <br/>
-            前面我们了解到，他是一个 <a>动态</a> <a>脚本</a> <a>跨平台</a>且<a>浏览器能运行</a>的语言 <br/>
+            前面我们了解到，他是一个 <a>动态</a> <a>脚本</a> <a>跨平台</a>且<a>浏览器能直接运行</a>的语言 <br/>
             还有呢？</p>
     </div>
 
@@ -99,7 +88,6 @@
     </div>
     <div class="step" data-x="2825" data-y="2325" data-z="-3000" data-scale="1" data-rotate-x="0">
         <q><b>Javascript 能做什么</b></q>
-
         <p>前端交互? 游戏? 动画? 服务器程序? 后端客户端? </p>
     </div>
     <div class="step" data-x="2825" data-y="2325" data-z="-3000" data-scale="1" data-rotate-y="90">
@@ -110,7 +98,7 @@
 
         <div class="img_container" onclick="window.gui.Window.open('http://browserquest.mozilla.org/')">
             <div>
-                <img src="assets/browserquest.png" >
+                <img src="assets/browserquest.png">
 
                 <div>
                     <span>BrowserQuest</span>
@@ -118,6 +106,7 @@
             </div>
             <div onclick="window.gui.Window.open('http://www.findyourwaytooz.com/')">
                 <img src="assets/disney.png">
+
                 <div>
                     <span>魔境仙踪（3D）</span>
                 </div>
@@ -126,6 +115,7 @@
     </div>
     <div class="step" data-x="-2500" data-y="2050" data-scale="8" data-rotate-x="90">
         <q><b>服务器，后端客户端（介绍）</b></q>
+
         <div class="img_container">
             <div>
                 <img src="assets/node.png" onclick="window.gui.Window.open('http://www.nodejs.org/')">
@@ -134,19 +124,23 @@
                     <span onclick="window.gui.Window.open('http://www.nodejs.org/')">Node.js</span>
                 </div>
 
-                <img src="assets/node-webkit.png" onclick="window.gui.Window.open('https://github.com/rogerwang/node-webkit')">
+                <img src="assets/node-webkit.png"
+                     onclick="window.gui.Window.open('https://github.com/rogerwang/node-webkit')">
+
                 <div>
                     <span onclick="window.gui.Window.open('https://github.com/rogerwang/node-webkit')">Node-Webkit</span>
                 </div>
             </div>
             <div style="float: right;">
                 <img src="assets/express.png" onclick="window.gui.Window.open('http://expressjs.com/')">
+
                 <div>
                     <span onclick="window.gui.Window.open('http://expressjs.com/')">Express.js</span>
                 </div>
 
 
                 <img src="assets/atom.png" onclick="window.gui.Window.open('http://atom.io/')">
+
                 <div>
                     <span onclick="window.gui.Window.open('http://atom.io/')">Atom Editor</span>
                 </div>
@@ -163,9 +157,10 @@
     <div class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
          data-scale="2">
         <p style="font-size: 108px; text-align: center">最后</p>
+
         <p style="text-align: center">这个课件是用什么技术做的呢?</p>
     </div>
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="13">
+    <div id="overview" class="step" data-x="1000" data-y="1500" data-scale="13">
     </div>
 
 </div>
