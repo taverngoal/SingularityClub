@@ -1,16 +1,3 @@
-process.on('uncaughtException', function (e) {
-    console.error(e.message)
-});
-Array.prototype.remove = function (obj) {
-    if (typeof obj == "number") {
-        return this.splice(obj, 1);
-    }
-    else {
-        var index = this.indexOf(obj);
-        if (index > -1)
-            return this.splice(index, 1);
-    }
-}
 angular.module("SingularityClub1", [])
     .controller("impress", ["$scope", "$interval", function ($scope, $interval) {
         $('[data-toggle="tooltip"]').tooltip();
@@ -77,7 +64,7 @@ angular.module("SingularityClub1", [])
             "less": {text: "LESS", description: "动态层叠样式表语言"},
             "sass": {text: "SASS", description: "扩展CSS3，增加了规则、变量、混入、选择器、继承等等特性"},
             "html": {text: "HTML", description: "超文本标记语言"},
-            "vbs": {text: "VBScript", description: "是基于Visual Basic的脚本语言。"}
-
+            "vbs": {text: "VBScript", description: "是基于Visual Basic的脚本语言。"},
+            "f#": {text: "F#", description: "函数式编程，.NET平台的计算辅助语言"}
         }
     }]);
