@@ -4,7 +4,7 @@
   "main":"app/index.html",
   "window": {
 //      "frame": false,
-//      "toolbar": false,
+      "toolbar": false,
       "width": 1200,
       "height": 700,
       "min_height": 500,
