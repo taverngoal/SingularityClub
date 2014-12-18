@@ -1,3 +1,16 @@
+process.on('uncaughtException', function (e) {
+    console.error(e.message)
+});
+Array.prototype.remove = function (obj) {
+    if (typeof obj == "number") {
+        return this.splice(obj, 1);
+    }
+    else {
+        var index = this.indexOf(obj);
+        if (index > -1)
+            return this.splice(index, 1);
+    }
+}
 angular.module("SingularityClub1", [])
     .controller("impress", ["$scope", "$interval", function ($scope, $interval) {
         $('[data-toggle="tooltip"]').tooltip();
